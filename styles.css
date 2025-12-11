@@ -131,10 +131,13 @@ body {
 .logo-subtitle {
     position: relative;
     color: var(--accent-gold);
-    font-size: 2rem;
+    -webkit-text-stroke-width: 1px; /* Outline thickness */
+    -webkit-text-stroke-color: rgb(78, 78, 78); /* Outline color */
+    font-weight: 900;
+    font-size: 3rem;
     text-align: center;
     z-index: 2;
-    text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.9);
     letter-spacing: 2px;
     white-space: nowrap;
     opacity: 0;
