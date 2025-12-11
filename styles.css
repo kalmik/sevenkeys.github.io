@@ -221,6 +221,7 @@ body {
     position: relative;
     z-index: 1;
     box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 .keys-image-left,
@@ -494,14 +495,29 @@ body {
         flex-direction: column;
         gap: 30px;
         margin-left: 0;
+        margin-top: 50px;
         width: 100%;
+        max-width: 100%;
         padding: 0 20px;
+        box-sizing: border-box;
     }
 
     .keys-image-left,
     .keys-image-right {
         width: 100%;
         max-width: 100%;
+        flex: none;
+    }
+
+    .keys-image {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .combat-image {
+        max-width: 100%;
+        padding: 0 10px;
+        box-sizing: border-box;
     }
 }
 
@@ -524,6 +540,17 @@ body {
         font-size: 1.5rem;
         bottom: 180px;
         letter-spacing: 0.5px;
+    }
+
+    .keys-images-wrapper {
+        padding: 0 10px;
+        margin-top: 40px;
+    }
+
+    .combat-image {
+        max-width: 100%;
+        padding: 0 10px;
+        box-sizing: border-box;
     }
 }
 
