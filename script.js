@@ -18,19 +18,20 @@ window.addEventListener('scroll', () => {
     const logoSection = document.querySelector('.logo-section');
     const chevronDown = document.querySelector('.chevron-down');
     const subtitle = document.querySelector('.logo-subtitle');
+    const subscribeButton = document.querySelector('.subscribe-button');
     
     const scrolled = window.pageYOffset;
     
-    // Show/hide chevron based on scroll position
-    if (chevronDown) {
-        if (scrolled <  100 ) {
-            chevronDown.classList.add('visible');
-            subtitle.classList.add('visible');
-        } else {
-            chevronDown.classList.remove('visible');
-            subtitle.classList.remove('visible');
-        }
+    if (scrolled <  100 ) {
+        chevronDown.classList.add('visible');
+        subtitle.classList.add('visible');
+        subscribeButton && subscribeButton.classList.add('visible');
+    } else {
+        chevronDown.classList.remove('visible');
+        subtitle.classList.remove('visible');
+        subscribeButton && subscribeButton.classList.remove('visible');
     }
+
     
     if (logoImage && logoSection) {
         const windowHeight = window.innerHeight;
@@ -72,8 +73,12 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Show chevron initially if at top
     const chevronDown = document.querySelector('.chevron-down');
-    if (chevronDown && window.pageYOffset === 0) {
+    const subtitle = document.querySelector('.logo-subtitle');
+    const subscribeButton = document.querySelector('.subscribe-button');
+    if (window.pageYOffset === 0) {
         chevronDown.classList.add('visible');
+        subtitle.classList.add('visible');
+        subscribeButton.classList.add('visible');
     }
     
     // Trigger initial scroll calculation
