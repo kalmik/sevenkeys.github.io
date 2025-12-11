@@ -16,6 +16,7 @@
 
 body {
     font-family: 'Pixelify Sans', sans-serif;
+    font-size: 1.25rem;
     background: var(--dark-bg);
     color: var(--text-primary);
     line-height: 1.6;
@@ -121,7 +122,7 @@ body {
     left: 50%;
     transform: translateX(-50%);
     color: var(--accent-gold);
-    font-size: 1.5rem;
+    font-size: 2rem;
     text-align: center;
     z-index: 2;
     text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
@@ -201,12 +202,54 @@ body {
     background: rgba(10, 10, 15, 0.8);
 }
 
+.keys-text-content {
+    max-width: 900px;
+    margin: 0 auto 50px;
+    position: relative;
+    z-index: 1;
+}
+
+.keys-images-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    width: 100vw;
+    margin-top: 100px;
+    margin-left: calc(-50vw + 50%);
+    padding: 0 20px;
+    position: relative;
+    z-index: 1;
+    box-sizing: border-box;
+}
+
+.keys-image-left,
+.keys-image-right {
+    flex: 1;
+    max-width: 800px;
+}
+
+.keys-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    border: 2px solid var(--accent-gold);
+    box-shadow: 0 0 30px rgba(212, 175, 55, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    object-fit: cover;
+}
+
+.keys-image:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 40px rgba(212, 175, 55, 0.5);
+}
+
 .video-gameplay-section .overlay {
     background: rgba(10, 10, 15, 0.8);
 }
 
 .section-title {
-    font-size: 3.5rem;
+    font-size: 4.8rem;
     font-weight: bold;
     text-align: center;
     margin-bottom: 50px;
@@ -219,7 +262,7 @@ body {
 }
 
 .epic-text {
-    font-size: 1.3rem;
+    font-size: 1.7rem;
     line-height: 2;
     margin-bottom: 30px;
     text-align: center;
@@ -235,6 +278,25 @@ body {
     color: var(--accent-gold-light);
     font-weight: bold;
     text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+}
+
+.combat-image {
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    margin: 50px auto 0;
+    display: block;
+    border-radius: 8px;
+    border: 2px solid var(--accent-gold);
+    box-shadow: 0 0 30px rgba(212, 175, 55, 0.3);
+    position: relative;
+    z-index: 1;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.combat-image:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 40px rgba(212, 175, 55, 0.5);
 }
 
 /* Video and Gameplay Section */
@@ -295,7 +357,7 @@ body {
 }
 
 .screenshot-placeholder p {
-    font-size: 1.0rem;
+    font-size: 1.4rem;
     color: var(--text-secondary);
     z-index: 1;
     margin-bottom: 10px;
@@ -303,7 +365,7 @@ body {
 
 .coming-soon {
     color: var(--accent-gold);
-    font-size: 0.9rem;
+    font-size: 1.3rem;
     font-style: italic;
     z-index: 1;
 }
@@ -368,7 +430,7 @@ body {
 }
 
 .video-content p {
-    font-size: 1.5rem;
+    font-size: 2rem;
     color: var(--text-primary);
     margin-bottom: 10px;
 }
@@ -387,7 +449,7 @@ body {
 
 .footer p {
     color: var(--text-secondary);
-    font-size: 0.9rem;
+    font-size: 1.3rem;
     position: relative;
     z-index: 1;
 }
@@ -395,12 +457,12 @@ body {
 /* Responsive Design */
 @media (max-width: 768px) {
     .section-title {
-        font-size: 2.5rem;
+        font-size: 3.5rem;
         letter-spacing: 2px;
     }
 
     .epic-text {
-        font-size: 1.1rem;
+        font-size: 1.5rem;
         line-height: 1.8;
     }
 
@@ -417,7 +479,7 @@ body {
     }
 
     .logo-subtitle {
-        font-size: 1.2rem;
+        font-size: 1.7rem;
         bottom: 220px;
         letter-spacing: 1px;
     }
@@ -427,15 +489,29 @@ body {
         height: 80px;
         font-size: 2.5rem;
     }
+
+    .keys-images-wrapper {
+        flex-direction: column;
+        gap: 30px;
+        margin-left: 0;
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .keys-image-left,
+    .keys-image-right {
+        width: 100%;
+        max-width: 100%;
+    }
 }
 
 @media (max-width: 480px) {
     .section-title {
-        font-size: 2rem;
+        font-size: 2.8rem;
     }
 
     .epic-text {
-        font-size: 1rem;
+        font-size: 1.4rem;
     }
 
     .description-section,
@@ -445,7 +521,7 @@ body {
     }
 
     .logo-subtitle {
-        font-size: 1rem;
+        font-size: 1.5rem;
         bottom: 180px;
         letter-spacing: 0.5px;
     }
